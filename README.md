@@ -5,6 +5,37 @@ A full-stack, role-based project management platform built to help teams organiz
 
 ---
 
+# Screenshots
+
+## Login Page
+![login](screenshots/login-page.png)
+
+## Dashboard (Admin & Member)
+![admindash](screenshots/admin-dashboard.png) ![memdash](screenshots/member-dashboard.png)
+
+## Register Page
+![register](screenshots/register-member.png)
+
+## Live Activity Timeline
+
+The **Live Activity Timeline** is synchronized across both the **Admin Team Page** and **Member Team Page**, ensuring that team activity and updates remain consistent and up to date for all users.
+
+### Admin Team Page
+![Admin Team Page](screenshots/teams-page1.png)
+
+### Member Team Page
+![Member Team Page](screenshots/teams-page2.png)
+
+## Task Page (with comment feature)
+![task](screenshots/register-member.png)
+
+## Invite Email Simulation in Terminal
+![Invite email simulation](screenshots/invite-email-simulation.png)
+
+Preview the invite email directly in the terminal with a simulated email flow. This provides a quick way to verify the invitation content and user experience during development without sending an actual email.
+
+---
+
 # Features
 
 ## Authentication & Authorization
