@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-white text-black antialiased selection:bg-black selection:text-white;
+  }
+}
+
+/* Minimalist Button and Input resets */
+@layer components {
+  .btn-primary {
+    @apply bg-black text-white px-4 py-2 border border-black hover:bg-white hover:text-black transition-colors font-medium text-sm;
+  }
+  .input-field {
+    @apply w-full border border-gray-300 px-3 py-2 focus:outline-none focus:border-black focus:ring-1 focus:ring-black text-sm;
+  }
+}
