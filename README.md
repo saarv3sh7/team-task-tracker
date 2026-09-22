@@ -141,7 +141,7 @@ team-task-tracker/
 
 # Future Enhancements
 
-* **DWebSockets Integration:** Replace the 5-second HTTP polling mechanism with Django Channels / Socket.io for true real-time, zero-latency timeline updates.
+* **WebSockets Integration:** Replace the 5-second HTTP polling mechanism with Django Channels / Socket.io for true real-time, zero-latency timeline updates.
 * **Actual Email Integration:** Wire the terminal-simulated email function to SendGrid or AWS SES for production-ready invitations.
 * **File Attachments:** Allow users to upload images and documents directly to task cards using AWS S3.
 * **Dark Mode:** Implement a Tailwind-native dark mode toggle to complement the minimalist design.
