@@ -7,7 +7,7 @@ A full-stack, role-based project management platform built to help teams organiz
 
 # Features
 
-## DAuthentication & Authorization
+## Authentication & Authorization
 - **Role-Based Access Control (RBAC):** Distinct Admin and Member roles.
 - **JWT Security:** Secure stateless authentication with automatic refresh-token handling and frontend interceptors.
 - **Admin Privileges:** Only administrators can create new workspaces and register or invite new members.
