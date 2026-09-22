@@ -56,7 +56,7 @@ Preview the invite email directly in the terminal with a simulated email flow. T
 
 ## Frontend UI/UX
 - **Minimal UI:** Clean, black-and-white, border-driven design.
-- **CModern Next.js Architecture:** Built utilizing the latest App Router paradigm.
+- **Modern Next.js Architecture:** Built utilizing the latest App Router paradigm.
 - **Responsive Design:** Fully styled using Tailwind CSS v4.
 - **Cross-Origin Support:** Fully configured CORS mapping for local development.
 
@@ -112,7 +112,7 @@ team-task-tracker/
 
 # API Endpoints
 
-##Authentication & Users
+## Authentication & Users
 
 | Method | Endpoint | Description |
 | --- | --- | --- |
@@ -131,7 +131,7 @@ team-task-tracker/
 | PATCH | `/api/tasks/{id}/` | Update task status, assignee, or details |
 | POST | `/api/comments/` | Append a comment to a specific task |
 
-##Activity Tracking
+## Activity Tracking
 
 | Method | Endpoint | Description |
 | --- | --- | --- |
