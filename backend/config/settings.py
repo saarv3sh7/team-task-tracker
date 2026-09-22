@@ -21,12 +21,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # 3rd party
+    
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
 
-    # Local
+    
     'users',
     'teams',
     'tasks',
@@ -122,15 +122,6 @@ SIMPLE_JWT = {
 }
 
 
-# ------------------------------------------------------------------------------
-# CORS
-# ------------------------------------------------------------------------------
-
-CORS_ALLOW_ALL_ORIGINS = True  # For development only
-
-
-# ------------------------------------------------------------------------------
-# Static Files
-# ------------------------------------------------------------------------------
+CORS_ALLOW_ALL_ORIGINS = True 
 
 STATIC_URL = 'static/'

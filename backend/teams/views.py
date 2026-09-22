@@ -15,19 +15,19 @@ class TeamViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        # Admins see all teams; Members see only teams they are part of
+
         if self.request.user.is_admin():
             return Team.objects.all()
         return Team.objects.filter(members=self.request.user)
 
     def get_permissions(self):
-        # Only admins can Create, Update, Delete teams and invite members
+
         if self.action in ['create', 'update', 'partial_update', 'destroy', 'invite']:
             return [IsAuthenticated(), IsAdminRole()]
         return super().get_permissions()
 
     def perform_create(self, serializer):
-        # Save the team, then automatically add the creator as a member
+
         team = serializer.save()
         team.members.add(self.request.user)
 

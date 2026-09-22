@@ -12,13 +12,13 @@ class TaskViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def get_permissions(self):
-        # Only admins can delete a task
+        
         if self.action == 'destroy':
             return [IsAuthenticated(), IsAdminRole()]
         return super().get_permissions()
 
     def get_queryset(self):
-        # Users only see tasks for teams they are part of
+        
         user_teams = self.request.user.teams.all()
         return Task.objects.filter(team__in=user_teams)
 
@@ -32,15 +32,15 @@ class TaskViewSet(viewsets.ModelViewSet):
         )
 
     def perform_update(self, serializer):
-        # Get the existing task before saving the new data
+        
         old_task = self.get_object()
         old_status = old_task.status
         old_assignee = old_task.assignee
 
-        # Save the updated task
+
         task = serializer.save()
 
-        # Log status changes specifically
+
         if old_status != task.status:
             log_activity(
                 user=self.request.user,
@@ -49,7 +49,7 @@ class TaskViewSet(viewsets.ModelViewSet):
                 message=f"moved '{task.title}' to {task.get_status_display()}"
             )
 
-        # Log assignee changes specifically
+
         if old_assignee != task.assignee:
             if task.assignee:
                 log_activity(
@@ -74,7 +74,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         comment = serializer.save(author=self.request.user)
-        # Log the comment along with a snippet of the text
+
         snippet = (comment.text[:30] + '...') if len(comment.text) > 30 else comment.text
         log_activity(
             user=self.request.user,

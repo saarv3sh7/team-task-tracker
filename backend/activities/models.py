@@ -5,10 +5,10 @@ User = get_user_model()
 
 class Activity(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    task_id = models.IntegerField() # Store raw ID to avoid strict ForeignKey constraints in Mongo
-    team_id = models.IntegerField(null=True) # Store raw team ID
+    task_id = models.IntegerField()
+    team_id = models.IntegerField(null=True)
     task_title = models.CharField(max_length=255)
-    action = models.CharField(max_length=50) # 'CREATED', 'UPDATED', 'COMMENTED'
+    action = models.CharField(max_length=50)
     message = models.CharField(max_length=255)
     timestamp = models.DateTimeField(auto_now_add=True)
 
