@@ -27,7 +27,7 @@ The **Live Activity Timeline** is synchronized across both the **Admin Team Page
 ![Member Team Page](screenshots/teams-page2.png)
 
 ## Task Page (with comment feature)
-![task](screenshots/register-member.png)
+![task](screenshots/task-page.png)
 
 ## Invite Email Simulation in Terminal
 ![Invite email simulation](screenshots/invite-email-simulation.png)
